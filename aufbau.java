@@ -53,7 +53,9 @@ public class aufbau {
     public static void aufbauPrint(Node node) {
         boolean b = false;
         int n = height(root);
-        for (int i = 1; i <= n; i++) {
+        System.out.println(node.data);
+
+        for (int i = 1; i < n; i++) {
             if (node != null) {
 
                 if (b != false) {
@@ -61,7 +63,7 @@ public class aufbau {
                     aufbauPrint(node.left);
                     break;
                 } else {
-                    
+
                     aufbauPrint(node.left);
                     aufbauPrint(node.right);
                     break;
@@ -81,7 +83,7 @@ public class aufbau {
         bt.add(50);
         bt.add(35);
         bt.add(20);
-
+        bt.aufbauPrint(root);
         System.out.println();
 
     }
